@@ -1,6 +1,16 @@
 import classes from "./Header.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { userAuthActions } from "../store/index";
 
 const Header = () => {
+
+  const dispatchFunction = useDispatch();
+  const isUserLogedIn = useSelector((state) => state.auth.isUserLogedIn);
+
+  const sighOutHandler = () => {
+    dispatchFunction(userAuthActions.signOut());
+  };
+
   return (
     <header className={classes.header}>
       <h1>Redux</h1>
@@ -9,6 +19,9 @@ const Header = () => {
           <li>
             <a href="/">Home</a>
           </li>
+          {isUserLogedIn && <li>
+            <a href="/">My sales</a>
+          </li>}
           <li>
             <a href="/">About us</a>
           </li>
@@ -16,7 +29,7 @@ const Header = () => {
             <a href="/">Contacts</a>
           </li>
           <li>
-            <button>Log out</button>
+            {isUserLogedIn && <button onClick={sighOutHandler}>Log out</button>}
           </li>
         </ul>
       </nav>
