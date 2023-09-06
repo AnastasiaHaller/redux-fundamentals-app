@@ -10,10 +10,10 @@ const Auth = () => {
             <input type="email" id="email" />
           </div>
           <div className={classes.control}>
-            <label htmlFor="password">Пароль</label>
+            <label htmlFor="password">Pasword</label>
             <input type="password" id="password" />
           </div>
-          <button>Войти</button>
+          <button>Log in</button>
         </form>
       </section>
     </main>
