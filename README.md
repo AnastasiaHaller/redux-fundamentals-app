@@ -1,4 +1,4 @@
-<b>Counter:</b> A simple counter app developed as a learning project while following the 'From Zero to Professional' course on Udemy. Focusing on learning Redux.
+<b>Counter:</b> A simple counter app developed as a learning project while following the 'Modern React - From Zero to Professional' course on Udemy. Focusing on learning Redux.
 
 <b>Technologies Used:</b>
 
